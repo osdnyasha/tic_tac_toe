@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    color: #545454;
+    display: flex;
+    font-family: sans-serif;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .container {
+    background: #5B80F0;
+    margin: 50px 15px;
+    padding: 50px;
+    border-radius: 25px;
+  }
+  
+  .title {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 15px;;
+  }
+  
+  .title span {
+    color: #F2EBD3;
+  }
+  
+  .status {
+    display: flex;
+    margin-top: 25px;
+    font-size: 25px;
+    justify-content: space-around;
+    height: 30px;
+  }
+  
+  .status__next {
+    color: #F2EBD3;
+  }
+
+  .who-next {
+    text-transform: uppercase;
+  }
+  
+  .status__reset {
+    cursor: pointer;
+  }
+  
+  .status__reset:hover {
+    color: #F2EBD3;
+  }
+
+  /* .history-info {
+    display: none;
+  } */
+
+  .history__head,
+  .history__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 10px;;
+    font-size: 24px;
+    background: #2563C1;
+    text-align: center;
+  }
+
+  .history__head{
+    padding: 20px;
+    background: #2563C1;
+  }
+
+  .history__content {
+    padding-bottom: 15px;
+    max-height: 215px;
+    overflow-y: auto;
+  }
+  .history__winner {
+    color: #fff;
+  }
+
+  .score {
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background: #2563C1;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .title_gray {
+    color: #545454;
+  }
+  
+  .game-grid {
+    background: #2563C1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 15px;
+    margin-top: 25px;
+  }
+  
+  .game-cell {
+    background: #497ED0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 100px;
+    width: 100px;
+  }
+  
+  .x,
+  .o {
+    cursor: default;
+  }
+  
+  .x::after {
+    content: 'x';
+    font-size: 100px;
+  }
+  
+  .o::after {
+    content: 'o';
+    color: #F2EBD3;
+    font-size: 100px;
+  }
+  
+  .won::after {
+    color: #BD022F;
+  }
+
+  @media only screen and (max-width: 840px) {
+    .container {
+      margin: 10px 25px;
+      padding: 25px;
+    }
+  }
+  
+  
+  @media only screen and (max-width: 460px) {
+    .container {
+      margin: 25px;
+      padding: 25px;
+    }
+  
+    .game-cell {
+      height: 80px;
+      width: 80px;
+    }
+  
+    .x::after {
+      font-size: 80px;
+    }
+  
+    .o::after {
+      font-size: 80px;
+    }
+  }
+  
