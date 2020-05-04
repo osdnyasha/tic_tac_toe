@@ -98,7 +98,7 @@ define('app/Controllers/Game.js', [
          */    
         aiMove() {
             this.winner = 'Ai';
-            let move = this.ai.botPickMove(this.board.gameCells); // вызов метода бота, возвращает координаты нового хода
+            let move = this.ai.botPick(this.currentPlayer[this.currentSymbol],this.board.gameCells); // вызов метода бота, возвращает координаты нового хода
             this.board.gameCells[move.i][move.j] = this.currentPlayer[this.currentSymbol]; // заполняю массив для оценки хода бота 
             let cells = this.getCellsGallery();
             setTimeout(() => {
